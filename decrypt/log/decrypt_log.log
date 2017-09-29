@@ -1,0 +1,5 @@
+[2017-09-29 18:02:41,427]  INFO main com.manager.jdbc.ManagerJdbcDecrypt - 文件不存在，请将文件命名为jdbc.properties，并放入config/jdbc/decrypt文件夹中以加密
+[2017-09-29 18:05:24,281]  INFO main com.manager.login.LoginDecrypt - 综合平台登录密码原文：123456
+[2017-09-29 18:05:24,700]  INFO main com.manager.login.LoginDecrypt - 综合平台登录密码加密：28F69D617CCB743A59A2D2EB5FEDFE42
+[2017-09-29 18:05:36,999]  INFO main com.manager.login.LoginDecrypt - 综合平台登录密码原文：test123456
+[2017-09-29 18:05:37,407]  INFO main com.manager.login.LoginDecrypt - 综合平台登录密码加密：8C29655BBD7E0BBC62D6270415A601FD
