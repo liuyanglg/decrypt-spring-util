@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="ignoreUnresolvablePlaceholders" value="true" />
+        <property name="locations">
+            <list>
+                <value>file:${root}/config/properties/*.properties</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="log4jPropertyConfigurer" class="com.util.Log4jPropertyConfigurer">
+        <property name="ignoreUnresolvablePlaceholders" value="true" />
+        <property name="location">
+            <value>log4j/log4j.properties</value>
+        </property>
+    </bean>
+
+    <bean id="managerLoginConfig" class="java.util.HashMap">
+        <constructor-arg>
+            <map>
+                <entry key="key">
+                    <value>${com.manager.login.key}</value>
+                </entry>
+                <entry key="enPassword">
+                    <value>${com.manager.login.encrypt.password}</value>
+                </entry>
+                <entry key="dePassword">
+                    <value>${com.manager.login.decrypt.password}</value>
+                </entry>
+            </map>
+        </constructor-arg>
+    </bean>
+
+    <bean id="managerJdbcConfig" class="java.util.HashMap">
+        <constructor-arg>
+            <map>
+                <entry key="key">
+                    <value>${com.manager.jdbc.key}</value>
+                </entry>
+            </map>
+        </constructor-arg>
+    </bean>
+    <bean id="dservJdbcConfig" class="java.util.HashMap">
+        <constructor-arg>
+            <map>
+                <entry key="key">
+                    <value>${com.dserv.jdbc.key}</value>
+                </entry>
+            </map>
+        </constructor-arg>
+    </bean>
+</beans>
